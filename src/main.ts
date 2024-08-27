@@ -3,7 +3,7 @@ import { AppModule } from './app.module';
 import { NestExpressApplication } from '@nestjs/platform-express';
 import * as hbs from 'express-handlebars';
 import { join } from 'path';
-import { renderImcTable } from './hbs/helpers';
+import { field, renderImcTable, result } from './hbs/helpers';
 
 async function bootstrap() {
   const app = await NestFactory.create<NestExpressApplication>(AppModule);
@@ -12,7 +12,7 @@ async function bootstrap() {
     'hbs',
     hbs.engine({
       extname: 'hbs',
-      helpers: { renderImcTable },
+      helpers: { renderImcTable, field, result },
     }),
   );
   app.setViewEngine('hbs');

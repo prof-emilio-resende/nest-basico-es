@@ -14,3 +14,18 @@ export function renderImcTable(obj: ImcTable) {
 
   return outputTemplate.replace('{rows}', rows);
 }
+
+export function field(label: string, name: string, value: string) {
+  return `
+    <label>${label}:</label>
+    <input value="${value ?? ''}" id="${name}" name="${name}" /><br />
+  `;
+}
+
+export function result(imc: string, description: string) {
+  return `
+    <div>
+      <span>imc: ${imc}</span>, ${description}
+    </div>
+  `;
+}

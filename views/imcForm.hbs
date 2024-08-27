@@ -1,0 +1,14 @@
+<form action="" method="post">
+    {{#with data}}
+        <div>
+            {{#field 'Altura' 'height' height}}{{/field}}
+            {{#field 'Peso' 'weight' weight}}{{/field}}
+            <br />
+            <button type="submit">Calcular!</button>
+        </div>
+        {{#if imc}}
+            <hr />
+            {{#result imc imcDescription}}{{/result}}
+        {{/if}}
+    {{/with}}
+</form>

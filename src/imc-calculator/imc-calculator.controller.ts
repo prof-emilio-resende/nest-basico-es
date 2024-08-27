@@ -26,4 +26,17 @@ export class ImcCalculatorController {
   calculate(@Body() request: ImcCalculatorRequest) {
     return this.imcCalcService.calculateAndTranslate(request);
   }
+
+  @Get('calculate/html')
+  @Render('imcForm.hbs')
+  getCalculate() {
+    return { data: {} };
+  }
+
+  @Post('calculate/html')
+  @Render('imcForm.hbs')
+  doCalculate(@Body() request: ImcCalculatorRequest) {
+    const response = this.imcCalcService.calculateAndTranslate(request);
+    return { data: response };
+  }
 }
