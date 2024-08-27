@@ -10,3 +10,14 @@
         </div>
     </body>
 </html>
+
+{{#if imc}}
+    <h1>Seu IMC é: {{imc}}</h1>
+    <a href="/imc">Calcular novamente</a>
+{{else}}
+    {{> imcForm}}  
+{{/if}}
+
+{{#with data}}
+    {{#renderImcTable this}}{{/renderImcTable}}
+{{/with}}
