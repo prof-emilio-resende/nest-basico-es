@@ -17,13 +17,21 @@ export class ImcCalculatorController {
   }
 
   @Get('table/html')
-  @Render('imcTable.hbs')
+  @Render('imcTable') 
   getTableHtml() {
     return { data: this.imcCalcService.getTable() };
   }
 
+  @Get('calculate')
+  @Render('imcForm') 
+  showForm() {
+    return {};
+  }
+
   @Post('calculate')
+  @Render('imcForm') 
   calculate(@Body() request: ImcCalculatorRequest) {
-    return this.imcCalcService.calculateAndTranslate(request);
+    const imc = this.imcCalcService.calculateAndTranslate(request);
+    return imc; 
   }
 }

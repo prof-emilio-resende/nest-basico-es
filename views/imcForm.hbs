@@ -1,10 +1,26 @@
-<form action="/imc" method="POST">
-    <label for="height">Altura (em metros):</label>
-    <input type="text" id="height" name="height" required>
-    
-    <label for="weight">Peso (em kg):</label>
-    <input type="text" id="weight" name="weight" required>
-    
-    <button type="submit">Calcular IMC</button>
-</form>
- 
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Calculadora de IMC</title>
+</head>
+<body>
+    <h1>Calculadora de IMC</h1>
+
+    {{#if imc}}
+        <h2>Seu IMC é: {{imc}}</h2>
+        <p>Descrição: {{imcDescription}}</p>
+        <a href="/imc/calculate">Calcular novamente</a>
+    {{else}}
+        <form action="/imc/calculate" method="POST">
+            <label for="height">Altura (em metros):</label>
+            <input type="text" id="height" name="height" required>
+            
+            <label for="weight">Peso (em kg):</label>
+            <input type="text" id="weight" name="weight" required>
+            
+            <button type="submit">Calcular IMC</button>
+        </form>
+    {{/if}}
+</body>
+</html>
