@@ -4,6 +4,7 @@ Grupo 2 - ES_27:
 - Ana Paula Lima dos Santos
 - Katiane Leal Vieira
 - Rafael Cavalcante Molina
+- Lucas Oliveira França
 - Gabriel Finetto Santos
 
 <p align="center">
