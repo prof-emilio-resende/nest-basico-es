@@ -1,10 +1,10 @@
 Grupo 2 - ES_27:
 
-Caroline de Freitas Paula
-Ana Paula Lima dos Santos
-Katiane Leal Vieira
-Rafael Cavalcante Molina
-Gabriel Finetto Santos
+- Caroline de Freitas Paula
+- Ana Paula Lima dos Santos
+- Katiane Leal Vieira
+- Rafael Cavalcante Molina
+- Gabriel Finetto Santos
 
 <p align="center">
   <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="200" alt="Nest Logo" /></a>
